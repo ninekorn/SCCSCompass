@@ -71,13 +71,11 @@ namespace SCCoreSystems
 
 
 
-            Debug.Log("dot: " + totalDotgoalRL); 
-            if (totalDotgoalRL < 0 || totalDotgoalRL > 0) //0.01f //0.023454321
+            //Debug.Log("dot: " + totalDotgoalRL); 
+            if (totalDotgoalRL < -0.0025f || totalDotgoalRL > 0.0025f)
             {
-                /*if (totalDotgoalRL < 0.35)
-                {
-                    totalDotgoalRL = 1 - totalDotgoalRL;
-                }*/
+                // i gotta incorporate a tiny change here. the dot product needs to be high at all times except when almost pointing towards the target where it needs to stop instantly... it needs to break and
+                // break fast otherwise the turret will just rotate non-stop. i might use a lerp later on but using the Dot product for the lerp is also a temp solution.
                 if (totalRight > totalLeft)
                 {
                     Debug.Log("north pole is right");
