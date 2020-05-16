@@ -47,6 +47,9 @@ namespace SCCoreSystems
             for (int i = 0; i < SC_AI4LR.Length; i++)
             {
                 SC_AI4LR[i] = new SC_AI(compass, northpole, maxPerceptronInstancesNeurons, perceptronLearningRate);
+                SC_AI4LR[i].SC_anglesNumber = 360;
+                SC_AI4LR[i].SC_Angle_Divider = 4;
+                SC_AI4LR[i].errormargin = 1;
                 SC_AI4LR[i].swtchwaypointtype = 0;
             }
         }
@@ -65,8 +68,16 @@ namespace SCCoreSystems
             }
             totalDotgoalRL /= SC_AI4LR.Length;
 
-            if (totalDotgoalRL < -0.023454321 || totalDotgoalRL > 0.023454321) //0.01f
+
+
+
+            Debug.Log("dot: " + totalDotgoalRL); 
+            if (totalDotgoalRL < 0 || totalDotgoalRL > 0) //0.01f //0.023454321
             {
+                /*if (totalDotgoalRL < 0.35)
+                {
+                    totalDotgoalRL = 1 - totalDotgoalRL;
+                }*/
                 if (totalRight > totalLeft)
                 {
                     Debug.Log("north pole is right");

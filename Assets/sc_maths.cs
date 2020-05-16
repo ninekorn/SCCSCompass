@@ -10,27 +10,27 @@ namespace SCCoreSystems
     {
 
 
-        static System.Random randomer;
-        public static double getSomeRandNum()
+        static System.Random randomer = new System.Random();
+        public static double getSomeRandNum(float min, float max)
         {
-            var num = (Mathf.Floor((float)randomer.NextDouble() * 999999999)) + 1; // this will get a number between 1 and 99;
+            var num = (Mathf.Floor((float)randomer.NextDouble() * max)) + 1; //999999999 // this will get a number between 1 and 99;
             num *= Mathf.Floor((float)randomer.NextDouble() * 2) == 1 ? 1 : -1; // this will add minus sign in 50% of cases
             if (num == 0)
             {
-                return getSomeRandNum();
+                return getSomeRandNum(min, max);
             }
-            return num * 0.000000001;
+            return num * min; // 0.000000001
         }
 
-        public static  float getSomeRandNumThousandDecimal()
+        public static float getSomeRandNumThousandDecimal(float min, float max)
         {
-            var num = Mathf.Floor((float)randomer.NextDouble() * 999) + 1; // this will get a number between 1 and 99;
+            var num = Mathf.Floor((float)randomer.NextDouble() * max) + 1; //999
             num *= Mathf.Floor((float)randomer.NextDouble() * 2) == 1 ? 1 : -1; // this will add minus sign in 50% of cases
             if (num == 0)
             {
-                return (float)getSomeRandNum();
+                return (float)getSomeRandNum(min, max);
             }
-            return (float)(num * 0.001);
+            return (float)(num * min); //0.001f
         }
 
         public static float ClampValue(float value, float min, float max)

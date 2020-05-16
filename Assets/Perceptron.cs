@@ -30,12 +30,17 @@ namespace Perceptron
 
         public void Train(float[] inputs, int desired)
         {
+
+            //the weights are now trained regardless as the compass can turn left or right and both choices are good but one is better than the other.
+            //but the weigths are also per angle and so if you use quarter angles, if the compass makes a mistake at 0.25, it will have other weights and a full
+            //training for the next angle.
+
             int guess = this.Guess(inputs);
             float error = desired - guess;
 
             for (int i = 0; i < weights.Length; i++)
             {
-                weights[i] += inputs[i] * this.learningRate * error;
+                weights[i] += this.learningRate * error * inputs[i];
             }
 
             /*// if the result does not match expected
