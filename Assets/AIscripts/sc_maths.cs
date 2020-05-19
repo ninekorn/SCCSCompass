@@ -9,7 +9,7 @@ namespace SCCoreSystems
     public static class sc_maths
     {
 
-
+        //found on the gamedevstackexchangeforums or the unity3d forums
         static System.Random randomer = new System.Random();
         public static double getSomeRandNum(float min, float max)
         {
@@ -21,7 +21,7 @@ namespace SCCoreSystems
             }
             return num * min; // 0.000000001
         }
-
+        //found on the gamedevstackexchangeforums or the unity3d forums
         public static float getSomeRandNumThousandDecimal(float min, float max)
         {
             var num = Mathf.Floor((float)randomer.NextDouble() * max) + 1; //999
@@ -32,6 +32,7 @@ namespace SCCoreSystems
             }
             return (float)(num * min); //0.001f
         }
+
 
         public static float ClampValue(float value, float min, float max)
         {

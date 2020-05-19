@@ -2,20 +2,21 @@
 using System;
 using Perceptron;
 
+
+
 namespace SCCoreSystems
 {
     public class SC_AI : MonoBehaviour
     {
-        public const int inputsNumber = 3; // 3 minimum i think
-
+        public int inputsNumber = 20; // 3 minimum i think
         public int SC_Angle_Divider = 4;
         public int SC_anglesNumber = 360;
-
         public int errormargin = 5;
+        public int weightsNumber = 10;
 
         public int SC_anglesQuarterNumber = 0; //SC_Angle_Divider * SC_anglesNumber
-        public const int weightsNumber = inputsNumber;
-        float[][] saveCurrentWeightForTheCurrentAngleInsideOfUnitsOf360;// = new float[SC_anglesQuarterNumber][];
+
+        public float[][] saveCurrentWeightForTheCurrentAngleInsideOfUnitsOf360;// = new float[SC_anglesQuarterNumber][];
 
         public int swtchwaypointtype = 0;
         Transform northpoletransform;
@@ -24,7 +25,7 @@ namespace SCCoreSystems
         Perceptron.Perceptron perc;
         float[] weights;
         float xmin, xmax, ymin, ymax;
-        Trainer[] training = new Trainer[inputsNumber];
+        Trainer[] training;// = new Trainer[inputsNumber];
         public int _guessedCorrectRight = 0;
         public int _guessedCorrectLeft = 0;
         public float _dotGoal;
@@ -35,8 +36,18 @@ namespace SCCoreSystems
         Vector2 compassPos;
         float randguess = 0;
 
+        int guessedCorrect = 0;
+        int guessedWrong = 0;
+
+        int turnRight = 0;
+        int turnLeft = 0;
+
+
+
+
         public SC_AI(Transform compass, Transform northpole, int maxPerceptronInstancesneurons, float perceptronLearningRate)
         {
+            training = new Trainer[inputsNumber];
             this.northpoletransform = northpole;
             this.compasspivot = compass;
             Starter(maxPerceptronInstancesneurons, perceptronLearningRate);
@@ -58,6 +69,10 @@ namespace SCCoreSystems
                 saveCurrentWeightForTheCurrentAngleInsideOfUnitsOf360[i] = weights;
             }
         }
+        float angle = 0.0f;
+        float angleRounded =0.0f;
+        float currentDiff = 0.0f;
+        float currentQuarterRoundedAngle = 0.0f;
 
         public void UpdatePerceptron()
         {
@@ -66,10 +81,18 @@ namespace SCCoreSystems
 
             compassPos = new Vector2(compasspivot.transform.position.x, compasspivot.transform.position.y);
 
-            var angle = sc_maths.ClampValue(compasspivot.transform.eulerAngles.z, 0, SC_anglesQuarterNumber);
-            var angleRounded = Mathf.Round(angle);
-            var currentDiff = (angle - angleRounded);
-            var currentQuarterRoundedAngle = Mathf.Round(currentDiff * SC_Angle_Divider) / SC_Angle_Divider;
+            if (swtchwaypointtype == 0)
+            {
+                angle = sc_maths.ClampValue(compasspivot.transform.eulerAngles.z, 0, SC_anglesQuarterNumber);
+            }
+            else if (swtchwaypointtype == 1)
+            {
+                angle = sc_maths.ClampValue(compasspivot.transform.eulerAngles.y, 0, SC_anglesQuarterNumber);
+            }
+
+            angleRounded = Mathf.Round(angle);
+            currentDiff = (angle - angleRounded);
+            currentQuarterRoundedAngle = Mathf.Round(currentDiff * SC_Angle_Divider) / SC_Angle_Divider;
             currentQuarterRoundedAngle *= 100;
             currentQuarterRoundedAngle = (angle * SC_Angle_Divider);
             currentQuarterRoundedAngle = sc_maths.ClampValue(currentQuarterRoundedAngle, 0, SC_anglesQuarterNumber);
@@ -80,23 +103,11 @@ namespace SCCoreSystems
             {
                 perc._SC_Perceptron_SetRotWeights(saveCurrentWeightForTheCurrentAngleInsideOfUnitsOf360[(int)currentQuarterRoundedAngle]);
 
-                float pointForwardDirNPCX = (float)(1 * Math.Cos(Math.PI * angle / 180.0)) + compassPos.x; // * Math.PI / 180
-                float pointForwardDirNPCY = (float)(1 * Math.Sin(Math.PI * angle / 180.0)) + compassPos.y;
-
-                Vector2 dirRightNPC = new Vector2(pointForwardDirNPCY - compassPos.y, -1 * (pointForwardDirNPCX - compassPos.x));
-                Vector2 dirNPCToPlayer = new Vector2(northpolepos.x - compassPos.x, northpolepos.y - compassPos.y);
-
-                var someOtherMAG = (float)Math.Sqrt((dirNPCToPlayer.x * dirNPCToPlayer.x) + (dirNPCToPlayer.y * dirNPCToPlayer.y));
-                dirNPCToPlayer.x /= someOtherMAG;
-                dirNPCToPlayer.y /= someOtherMAG;
-
                 if (swtchwaypointtype == 0)
                 {
                     Vector2 dirbulletprimerright = new Vector2(compasspivot.transform.right.x, compasspivot.transform.right.y);
                     dirbulletprimerright.Normalize();
 
-                    Vector2 dirbulletprimerforward = new Vector2(compasspivot.transform.up.x, compasspivot.transform.up.y);
-                    dirbulletprimerforward.Normalize();
                     Vector2 dirprimertonorthpoletransform = new Vector2(northpoletransform.position.x, northpoletransform.position.y) - new Vector2(compasspivot.position.x, compasspivot.position.y);
                     dirprimertonorthpoletransform.Normalize();
 
@@ -111,24 +122,64 @@ namespace SCCoreSystems
                         answer = -1;
                     }
                 }
-
-                for (int i = 0; i < training.Length; i++) 
+                else if (swtchwaypointtype == 1)
                 {
-                    double angleInRadians = random.Next(360) / (2 * Math.PI);
+                    Vector2 dirbulletprimerright = new Vector2(-compasspivot.transform.right.z,compasspivot.transform.right.x);
+                    dirbulletprimerright.Normalize();
 
-                    // randomly getting a point at the location of the compass
-                    int x = (int)(0.001f * Math.Cos(angleInRadians) + compassPos.x); 
-                    int y = (int)(0.001f * Math.Sin(angleInRadians) + compassPos.y);
+                    Vector2 dirprimertonorthpoletransform = new Vector2(northpoletransform.position.x, northpoletransform.position.z) - new Vector2(compasspivot.position.x, compasspivot.position.z);
+                    dirprimertonorthpoletransform.Normalize();
 
-                    training[i] = new Trainer(weightsNumber, x, y, answer);
-                    perc.Train(training[i].inputs, training[i].answer);
+                    _dotGoal = sc_maths.Dot(dirbulletprimerright.x, dirbulletprimerright.y, dirprimertonorthpoletransform.x, dirprimertonorthpoletransform.y);
+
+                    if (_dotGoal >= 0) // 0.001f
+                    {
+                        answer = 1;
+                    }
+                    else if (_dotGoal < 0)//-0.001f
+                    {
+                        answer = -1;
+                    }
                 }
 
-                int guessedCorrect = 0;
-                int guessedWrong = 0;
+                if (swtchwaypointtype ==0)
+                {
+                    compassPos = new Vector2(compasspivot.transform.position.x, compasspivot.transform.position.y);
 
-                int turnRight = 0;
-                int turnLeft = 0;
+                    for (int i = 0; i < training.Length; i++)
+                    {
+                        double angleInRadians = random.Next(360) / (2 * Math.PI);
+
+                        // randomly getting a point at the location of the compass
+                        float x = (float)(0.001f * Math.Cos(angleInRadians) + compassPos.x);
+                        float y = (float)(0.001f * Math.Sin(angleInRadians) + compassPos.y);
+
+                        training[i] = new Trainer(weightsNumber, x, y, answer);
+                        perc.Train(training[i].inputs, training[i].answer);
+                    }
+                }
+                else if (swtchwaypointtype == 1)
+                {
+                    compassPos = new Vector2(-compasspivot.transform.position.z, compasspivot.transform.position.x);
+
+                    for (int i = 0; i < training.Length; i++)
+                    {
+                        double angleInRadians = random.Next(360) / (2 * Math.PI);
+
+                        // randomly getting a point at the location of the compass
+                        float x = (float)(0.001f * Math.Cos(angleInRadians) + compassPos.x);
+                        float y = (float)(0.001f * Math.Sin(angleInRadians) + compassPos.y);
+
+                        training[i] = new Trainer(weightsNumber, x, y, answer);
+                        perc.Train(training[i].inputs, training[i].answer);
+                    }
+                }
+
+                guessedCorrect = 0;
+                guessedWrong = 0;
+
+                turnRight = 0;
+                turnLeft = 0;
 
                 for (int i = 0; i < training.Length; i++)
                 {
@@ -155,11 +206,15 @@ namespace SCCoreSystems
                     }
                 }
 
-                if (guessedCorrect >= (training.Length * 0.5f) - errormargin||
-                   guessedWrong >= (training.Length * 0.5f) - errormargin)
+                if (guessedCorrect >= (training.Length * 0.5f) - errormargin|| // if the guess is higher than half of training.length
+                   guessedWrong >= (training.Length * 0.5f) - errormargin ||
+                   guessedCorrect <= (training.Length * 0.5f) + errormargin ||
+                   guessedWrong <= (training.Length * 0.5f) + errormargin)
                 {
                     if (turnRight >= (training.Length * 0.5f) - errormargin||
-                        turnLeft >= (training.Length * 0.5f) - errormargin )
+                        turnLeft >= (training.Length * 0.5f) - errormargin ||
+                        turnRight <= (training.Length * 0.5f) + errormargin ||
+                        turnLeft <= (training.Length * 0.5f) + errormargin)
                     {
                         if (turnRight > turnLeft)
                         {
@@ -169,17 +224,19 @@ namespace SCCoreSystems
                         {
                             _guessedCorrectLeft++;
                         }
-                    }
-                    else if (turnRight <= (training.Length * 0.5f) + errormargin ||
-                             turnLeft <= (training.Length * 0.5f) + errormargin)
-                    {
-                        if (turnRight > turnLeft)
+                        else
                         {
-                            _guessedCorrectRight++;
-                        }
-                        else if (turnRight < turnLeft)
-                        {
-                            _guessedCorrectLeft++;
+                            randguess = (int)(Math.Floor(sc_maths.getSomeRandNumThousandDecimal(0, 2))); // random value between 0 and 1
+
+                            if (randguess == 0)
+                            {
+                                _guessedCorrectRight++;
+                            }
+                            else
+                            {
+                                _guessedCorrectLeft++;
+                            }
+                            //Debug.Log("Data is too similar");
                         }
                     }
                     else
@@ -195,49 +252,6 @@ namespace SCCoreSystems
                             _guessedCorrectLeft++;
                         }
                         //Debug.Log("Data is too similar");
-                    }
-                }
-                else if (guessedCorrect <= (training.Length * 0.5f) + errormargin||
-                         guessedWrong <= (training.Length * 0.5f) + errormargin)
-                {
-
-                    if (turnRight >= (training.Length * 0.5f) - errormargin ||
-                        turnLeft >= (training.Length * 0.5f) - errormargin)
-                    {
-                        if (turnRight > turnLeft)
-                        {
-                            _guessedCorrectRight++;
-                        }
-                        else if (turnRight < turnLeft)
-                        {
-                            _guessedCorrectLeft++;
-                        }
-                    }
-                    else if (turnRight <= (training.Length * 0.5f) + errormargin||
-                            turnLeft <= (training.Length * 0.5f) + errormargin)
-                    {
-                        if (turnRight > turnLeft)
-                        {
-                            _guessedCorrectRight++;
-                        }
-                        else if (turnRight < turnLeft)
-                        {
-                            _guessedCorrectLeft++;
-                        }
-                    }
-                    else
-                    {
-                        randguess = (int)(Math.Floor(sc_maths.getSomeRandNumThousandDecimal(0, 2))); // random value between 0 and 1
-
-                        if (randguess == 0)
-                        {
-                            _guessedCorrectRight++;
-                        }
-                        else
-                        {
-                            _guessedCorrectLeft++;
-                        }
-                        //Debug.Log("Data is too similar 1");
                     }
                 }
                 else
