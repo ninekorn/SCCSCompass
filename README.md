@@ -1,4 +1,4 @@
-❮img src="images/sccsgimbal0.png" width="100" ❯
+<img src="images/sccsgimbal0.png">
 
 # SCCSGimbal v1.1
 English: using Brollof's Simple Perceptron found here https://github.com/Brollof/SimplePerceptron , i have made a gimbal machine learning system for the x/y/z axis.
@@ -9,10 +9,10 @@ Français: J'utilise le Perceptron Brollof Simple et linéaire que vous pouvez t
 English: A planet type "voxel minecraft" shooter game at the same time 🙂. i built this game. not available anywhere else. work in progress
 Français: Un shooter de planètes type "voxel minecraft" 🙂. c'est moi qui a construit ce jeu. présentement non disponible ailleurs. en développement . 
 
-❮img src="images/voxeldestructibleplanetaigimbal3.png" width="100" ❯
-❮img src="images/voxeldestructibleplanetaigimbal.png" width="100" ❯
-❮img src="images/voxeldestructibleplanetaigimbal1.png" width="100" ❯
-❮img src="images/voxeldestructibleplanetaigimbal2.png" width="100" ❯
+<img src="images/voxeldestructibleplanetaigimbal3.png" width="100">
+<img src="images/voxeldestructibleplanetaigimbal.png" width="100">
+<img src="images/voxeldestructibleplanetaigimbal1.png" width="100">
+<img src="images/voxeldestructibleplanetaigimbal2.png" width="100">
 
 # SCCSCompass v1.0
 using Brollof's Simple Perceptron found here https://github.com/Brollof/SimplePerceptron , i have made a compass. You can divide the circumference of the 2d Circle to half angles or quarter angles and so on.
