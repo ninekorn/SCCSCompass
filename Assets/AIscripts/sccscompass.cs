@@ -1,19 +1,15 @@
-﻿using System.Collections;
+﻿//by steve chassé aka ninekorn
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 namespace SCCoreSystems
 {
     public class sccscompass : MonoBehaviour
-	{	
-		Shader targetShader;
-		Material mat;
-		float desired = 5.0f;
-		Vector3[] verts;
-
-        SC_AI[] SC_AI4LR = new SC_AI[maxPerceptronInstances];
+	{
+        sccsaiguess[] SC_AI4LR = new sccsaiguess[maxPerceptronInstances];
 
         public Transform northpole; //2d game target direction bullseye
         public Transform compass; //2d game drone turret
@@ -39,7 +35,6 @@ namespace SCCoreSystems
         Vector3 dirturrettoplayer = Vector2.zero;
         Vector3 dirturrettoenemy = Vector2.zero;
 
-
         public Vector3 needleScale = new Vector3(0.8f, 4, 0.8f);
         public Vector3 needlePosition = new Vector3(0, 2, 0);
 
@@ -48,8 +43,24 @@ namespace SCCoreSystems
             compassneedleobject = GameObject.CreatePrimitive(PrimitiveType.Cube);
             compassneedleobject.transform.localScale = needleScale;
             compass = compassneedleobject.transform;
+
+            needlePosition.y += transform.position.y;
             compass.position = needlePosition;
+
             compass.parent = this.transform;
+
+            if (swtchwaypointtype == 0) // Z AXIS
+            {
+                compass.GetComponent<MeshRenderer>().material.color = Color.blue;
+            }
+            else if (swtchwaypointtype == 1) // Y AXIS
+            {
+                compass.GetComponent<MeshRenderer>().material.color = Color.green;
+            }
+            else if (swtchwaypointtype == 2) // X AXIS
+            {
+                compass.GetComponent<MeshRenderer>().material.color = Color.red;
+            }
 
             /*northpoleobject = GameObject.CreatePrimitive(PrimitiveType.Sphere);
             northpoleobject.transform.localScale = new Vector3(2, 2, 2);
@@ -58,9 +69,9 @@ namespace SCCoreSystems
 
             for (int i = 0; i < SC_AI4LR.Length; i++)
             {
-                SC_AI4LR[i] = new SC_AI(compass, northpole, maxPerceptronInstancesNeurons, perceptronLearningRate);
+                SC_AI4LR[i] = new sccsaiguess(compass, northpole, maxPerceptronInstancesNeurons, perceptronLearningRate);
                 SC_AI4LR[i].SC_anglesNumber = 360;
-                SC_AI4LR[i].SC_Angle_Divider = 4;
+                SC_AI4LR[i].SC_Angle_Divider = 10;
                 SC_AI4LR[i].weightsNumber = 10;
                 SC_AI4LR[i].inputsNumber = 20; // minimum 3 for the Trainer class
                 SC_AI4LR[i].errormargin = 5;
@@ -70,6 +81,19 @@ namespace SCCoreSystems
 
         void Update()
         {
+            if (swtchwaypointtype == 0) // Z AXIS ROTATION
+            {
+                Debug.DrawRay(this.transform.position, this.transform.up, Color.blue);
+            }
+            else if(swtchwaypointtype == 1) // Y AXIS ROTATION
+            {
+                Debug.DrawRay(this.transform.position, this.transform.right, Color.green);
+            }
+            else if (swtchwaypointtype == 2) // X AXIS ROTATION
+            {
+                Debug.DrawRay(this.transform.position, this.transform.up, Color.red);
+            }
+
             totalRight = 0;
             totalLeft = 0;
             totalDotgoalRL = 0;
@@ -85,6 +109,11 @@ namespace SCCoreSystems
 
             if (swtchwaypointtype == 0)
             {
+                //Vector3 eulerAngles = transform.eulerAngles;
+                //eulerAngles.x = 0;
+                //eulerAngles.y = gearLR.transform.eulerAngles.y;
+                //transform.eulerAngles = eulerAngles;
+
                 //Debug.Log("dot: " + totalDotgoalRL); 
                 if (totalDotgoalRL < -0.0025f || totalDotgoalRL > 0.0025f)
                 {
@@ -117,11 +146,16 @@ namespace SCCoreSystems
             }
             else if (swtchwaypointtype == 1)
             {
+                Vector3 eulerAngles = transform.eulerAngles;
+
+                eulerAngles.x = 0;
+                eulerAngles.z = 0;
+
+                transform.eulerAngles = eulerAngles;
+
                 //Debug.Log("dot: " + totalDotgoalRL); 
                 if (totalDotgoalRL < -0.0025f || totalDotgoalRL > 0.0025f)
                 {
-                    // i gotta incorporate a tiny change here. the dot product needs to be high at all times except when almost pointing towards the target where it needs to stop instantly... it needs to break and
-                    // break fast otherwise the turret will just rotate non-stop. i might use a lerp later on but using the Dot product for the lerp is also a temp solution.
                     if (totalRight > totalLeft)
                     {
                         //Debug.Log("north pole is right");
@@ -141,6 +175,38 @@ namespace SCCoreSystems
                         else
                         {
                             transform.Rotate(new Vector3(0, needle_rotation_speed * Mathf.Abs(totalDotgoalRL), 0), Space.World);
+                        }
+                    }
+                }
+                else
+                {
+                    //Debug.Log("found north pole / bullseye");
+                }
+            }
+            else if (swtchwaypointtype == 2)
+            {
+                //Debug.Log("dot: " + totalDotgoalRL); 
+                if (totalDotgoalRL < -0.0025f || totalDotgoalRL > 0.0025f)
+                {
+                    if (totalRight > totalLeft)
+                    {
+                        //Debug.Log("north pole is right");
+                        transform.Rotate(new Vector3(-needle_rotation_speed * Mathf.Abs(totalDotgoalRL), 0, 0), Space.World);
+                    }
+                    else if (totalRight < totalLeft)
+                    {
+                        //Debug.Log("north pole is left");
+                        transform.Rotate(new Vector3(needle_rotation_speed * Mathf.Abs(totalDotgoalRL), 0, 0), Space.World);
+                    }
+                    else
+                    {
+                        if (frame4RandomRorL == 0)
+                        {
+                            transform.Rotate(new Vector3(-needle_rotation_speed * Mathf.Abs(totalDotgoalRL), 0, 0), Space.World);
+                        }
+                        else
+                        {
+                            transform.Rotate(new Vector3(needle_rotation_speed * Mathf.Abs(totalDotgoalRL), 0, 0), Space.World);
                         }
                     }
                 }
