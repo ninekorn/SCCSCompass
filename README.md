@@ -1,8 +1,20 @@
-https://i.ibb.co/Vw21X5L/sccsgimbal0.png
+![SCCSGimbal](/images/sccsgimbal0.png)
 
+# SCCSGimbal v1.1
+English: using Brollof's Simple Perceptron found here https://github.com/Brollof/SimplePerceptron , i have made a gimbal machine learning system for the x/y/z axis.
 
+Français: J'utilise le Perceptron Brollof Simple et linéaire que vous pouvez trouver ici https://github.com/Brollof/SimplePerceptron  et j'ai construit un systèmes de gimballes "machine learning" pour les axes x/y/z.
 
-# SCCSCompass
+//not available yet: other project using parts of this system:
+English: A planet type "voxel minecraft" shooter game at the same time 🙂. i built this game. not available anywhere else. work in progress
+Français: Un shooter de planètes type "voxel minecraft" 🙂. c'est moi qui a construit ce jeu. présentement non disponible ailleurs. en développement . 
+
+![SCCSGame](/images/voxeldestructibleplanetaigimbal3.png)
+![SCCSGame](/images/voxeldestructibleplanetaigimbal.png)
+![SCCSGame](/images/voxeldestructibleplanetaigimbal1.png)
+![SCCSGame](/images/voxeldestructibleplanetaigimbal2.png)
+
+# SCCSCompass v1.0
 using Brollof's Simple Perceptron found here https://github.com/Brollof/SimplePerceptron , i have made a compass. You can divide the circumference of the 2d Circle to half angles or quarter angles and so on.
 
 1. in order to set a different waypoint/bullseye/northpole for the compass to look at, you can go in the SC_AI.cs script and 
@@ -29,15 +41,3 @@ modify or add another "else if" to the following lines to aim at another target 
                 answer = -1;
             }
         }
-        
-        
-        
-        
-        not available yet: other project using parts of this system:
-https://i.ibb.co/MPvm30g/voxeldestructibleplanetaigimbal3.png
-https://i.ibb.co/6H7r1jn/voxeldestructibleplanetaigimbal.png
-https://i.ibb.co/jyrvbsG/voxeldestructibleplanetaigimbal1.png
-https://i.ibb.co/Jt6Z5Rb/voxeldestructibleplanetaigimbal2.png
-        
-        
-        
