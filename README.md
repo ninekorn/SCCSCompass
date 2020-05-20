@@ -34,19 +34,17 @@ modify or add another "else if" to the following lines to aim at another target 
         {
             Vector2 dirbulletprimerright = new Vector2(compasspivot.transform.right.x, compasspivot.transform.right.y);
             dirbulletprimerright.Normalize();
-
-            Vector2 dirbulletprimerforward = new Vector2(compasspivot.transform.up.x, compasspivot.transform.up.y);
-            dirbulletprimerforward.Normalize();
+            
             Vector2 dirprimertonorthpoletransform = new Vector2(northpoletransform.position.x, northpoletransform.position.y) - new Vector2(compasspivot.position.x, compasspivot.position.y);
             dirprimertonorthpoletransform.Normalize();
 
             _dotGoal = sc_maths.Dot(dirbulletprimerright.x, dirbulletprimerright.y, dirprimertonorthpoletransform.x, dirprimertonorthpoletransform.y);
 
-            if (_dotGoal >= 0.001f)
+            if (_dotGoal >= 0.001f) // maybe "x < 0.0f" here instead. will test later.
             {
                 answer = 1;
             }
-            else if (_dotGoal < -0.001f)
+            else if (_dotGoal < -0.001f) // maybe "x < 0.0f" here instead. will test later.
             {
                 answer = -1;
             }
