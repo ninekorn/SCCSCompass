@@ -1,3 +1,6 @@
+[img]https://i.ibb.co/Vw21X5L/sccsgimbal0.png[/img]
+
+
 # SCCSCompass
 using Brollof's Simple Perceptron found here https://github.com/Brollof/SimplePerceptron , i have made a compass. You can divide the circumference of the 2d Circle to half angles or quarter angles and so on.
 
@@ -25,3 +28,15 @@ modify or add another "else if" to the following lines to aim at another target 
                 answer = -1;
             }
         }
+        
+        
+        
+        
+        not available yet: other project using parts of this system:
+[img]https://i.ibb.co/6H7r1jn/voxeldestructibleplanetaigimbal.png[/img]
+[img]https://i.ibb.co/jyrvbsG/voxeldestructibleplanetaigimbal1.png[/img]
+[img]https://i.ibb.co/Jt6Z5Rb/voxeldestructibleplanetaigimbal2.png[/img]
+[img]https://i.ibb.co/MPvm30g/voxeldestructibleplanetaigimbal3.png[/img]
+        
+        
+        
