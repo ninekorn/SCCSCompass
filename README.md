@@ -1,6 +1,6 @@
+using Unity3D 2017.4.39f1
+
 [img]https://i.ibb.co/Vw21X5L/sccsgimbal0.png[/img]
-
-
 
 # SCCSGimbal v1.1
 English: using Brollof's Simple Perceptron found here https://github.com/Brollof/SimplePerceptron , i have made a gimbal machine learning system for the x/y/z axis. you just need to move the "northpole/bullseye" around in the unity3D EDITOR. it's not working for the GAME mode yet.
