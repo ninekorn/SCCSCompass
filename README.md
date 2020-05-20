@@ -3,7 +3,7 @@
 # SCCSGimbal v1.1
 English: using Brollof's Simple Perceptron found here https://github.com/Brollof/SimplePerceptron , i have made a gimbal machine learning system for the x/y/z axis.
 
-Français: J'utilise le Perceptron Brollof Simple et linéaire que vous pouvez trouver ici https://github.com/Brollof/SimplePerceptron  C'est un système de gimballes "machine learning" pour les axes x/y/z.
+Français: J'utilise le Perceptron Brollof Simple et linéaire que vous pouvez trouver ici https://github.com/Brollof/SimplePerceptron  et j'ai construit un systèmes de gimballes "machine learning" pour les axes x/y/z.
 
 //not available yet: other project using parts of this system:
 English: A planet type "voxel minecraft" shooter game at the same time 🙂. i built this game. not available anywhere else. work in progress
