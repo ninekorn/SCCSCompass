@@ -1,4 +1,5 @@
-[img]https://i.ibb.co/Vw21X5L/sccsgimbal0.png[/img]
+https://i.ibb.co/Vw21X5L/sccsgimbal0.png
+
 
 
 # SCCSCompass
@@ -33,10 +34,10 @@ modify or add another "else if" to the following lines to aim at another target 
         
         
         not available yet: other project using parts of this system:
-[img]https://i.ibb.co/6H7r1jn/voxeldestructibleplanetaigimbal.png[/img]
-[img]https://i.ibb.co/jyrvbsG/voxeldestructibleplanetaigimbal1.png[/img]
-[img]https://i.ibb.co/Jt6Z5Rb/voxeldestructibleplanetaigimbal2.png[/img]
-[img]https://i.ibb.co/MPvm30g/voxeldestructibleplanetaigimbal3.png[/img]
+https://i.ibb.co/MPvm30g/voxeldestructibleplanetaigimbal3.png
+https://i.ibb.co/6H7r1jn/voxeldestructibleplanetaigimbal.png
+https://i.ibb.co/jyrvbsG/voxeldestructibleplanetaigimbal1.png
+https://i.ibb.co/Jt6Z5Rb/voxeldestructibleplanetaigimbal2.png
         
         
         
