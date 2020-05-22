@@ -49,3 +49,24 @@ modify or add another "else if" to the following lines to aim at another target 
                 answer = -1;
             }
         }
+        
+        
+        
+        
+        
+        
+        
+
+
+sc_core_systems@outlook.com
+https://twitter.com/sccoresystems1
+https://ninekorn.imgbb.com/
+https://www.twitch.tv/sccoresystems
+currently working on
+https://www.youtube.com/watch?v=yWspu7zvbBU
+https://forums.frontier.co.uk/threads/virtual-desktop-program-with-embedded-physics-engine-at-the-press-of-a-button-coming-in-2020.542577/
+https://github.com/ninekorn/SCCSCompass
+
+
+
+
