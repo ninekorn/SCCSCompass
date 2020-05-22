@@ -1,3 +1,5 @@
+personal note 2020-05-22: Worms Bitcoin Game Destructible Voxel. I will be approaching Team17 studios with a new Worms Game with Planet Destruction and machine learning. but it will also incorporate Bitcoin mining. if you approach Team17 before me for that project, i don't care because i wrote it down here on the 22nd of May 2020 and i did an update on this commit personal notes.
+
 using Unity3D 2017.4.39f1
 
 [img]https://i.ibb.co/Vw21X5L/sccsgimbal0.png[/img]
