@@ -29,44 +29,11 @@ Français: Un shooter de planètes type "voxel minecraft" 🙂. c'est moi qui a 
 # SCCSCompass v1.0
 using Brollof's Simple Perceptron found here https://github.com/Brollof/SimplePerceptron , i have made a compass. You can divide the circumference of the 2d Circle to half angles or quarter angles and so on.
 
-1. in order to set a different waypoint/bullseye/northpole for the compass to look at, you can go in the SC_AI.cs script and 
-modify or add another "else if" to the following lines to aim at another target and of course change the swtchwaypointtype to that other selectable waypoint/bullseye/northpole.
-
-        if (swtchwaypointtype == 0)
-        {
-            Vector2 dirbulletprimerright = new Vector2(compasspivot.transform.right.x, compasspivot.transform.right.y);
-            dirbulletprimerright.Normalize();
-            
-            Vector2 dirprimertonorthpoletransform = new Vector2(northpoletransform.position.x, northpoletransform.position.y) - new Vector2(compasspivot.position.x, compasspivot.position.y);
-            dirprimertonorthpoletransform.Normalize();
-
-            _dotGoal = sc_maths.Dot(dirbulletprimerright.x, dirbulletprimerright.y, dirprimertonorthpoletransform.x, dirprimertonorthpoletransform.y);
-
-            if (_dotGoal >= 0.001f) // maybe "x < 0.0f" here instead. will test later.
-            {
-                answer = 1;
-            }
-            else if (_dotGoal < -0.001f) // maybe "x < 0.0f" here instead. will test later.
-            {
-                answer = -1;
-            }
-        }
-        
-        
-        
-        
-        
-        
-        
 
 https://www.twitch.tv/sccoresystems
-
 https://twitter.com/sccoresystems1
-
 https://ninekorn.imgbb.com
-
 http://forums.atomictorch.com/ <= user ninekorn - Void Expanse modder
-
 https://forums.frontier.co.uk/threads/virtual-desktop-program-with-embedded-physics-engine-at-the-press-of-a-button-coming-in-2020.542577/
 
 
