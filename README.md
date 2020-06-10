@@ -8,7 +8,7 @@ English: using Brollof's Simple Perceptron found here https://github.com/Brollof
 
 Français: J'utilise le Perceptron Brollof Simple et linéaire que vous pouvez trouver ici https://github.com/Brollof/SimplePerceptron  et j'ai construit un systèmes de "three-gimbal mechanism" https://en.wikipedia.org/wiki/Gimbal_lock#/media/File:Gimbal_3_axes_rotation.gif "machine learning" pour les axes x/y/z. vous avez juste besoin de déplacer le "PoleNord/bullseye" dans le Unity3D EDITOR. ça ne fonctionne pas présentement dans le Unity3D GAME mode
 
-current known issues: the dot product by itself to slow down high speed rotating gimbal needles is not enough. i will soon lerp this or use both dot product and lerp. 
+current known issues: the dot product by itself to slow down high speed rotating gimbal needles is not enough to stabilize them. i will soon lerp this or use both dot product and lerp. 
 
 //not available yet: other project using parts of this system:
 English: A planet type "voxel minecraft" shooter game at the same time 🙂. i built this game. not available anywhere else. work in progress
