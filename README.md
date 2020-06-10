@@ -31,9 +31,13 @@ using Brollof's Simple Perceptron found here https://github.com/Brollof/SimplePe
 
 
 https://www.twitch.tv/sccoresystems
+
 https://twitter.com/sccoresystems1
+
 https://ninekorn.imgbb.com
-http://forums.atomictorch.com/ <= user ninekorn - Void Expanse modder
+
+http://forums.atomictorch.com/index.php?action=profile;u=666
+
 https://forums.frontier.co.uk/threads/virtual-desktop-program-with-embedded-physics-engine-at-the-press-of-a-button-coming-in-2020.542577/
 
 
