@@ -5,9 +5,9 @@ using Unity3D 2017.4.39f1
 [img]https://i.ibb.co/Vw21X5L/sccsgimbal0.png[/img]
 
 # SCCSGimbal v1.1
-English: using Brollof's Simple Perceptron found here https://github.com/Brollof/SimplePerceptron , i have made a "three-gimbal mechanism " alternative https://en.wikipedia.org/wiki/Gimbal_lock#/media/File:Gimbal_3_axes_rotation.gif machine learning system for the x/y/z axis. you just need to move the "northpole/bullseye" around in the unity3D EDITOR. it's not working for the GAME mode yet.
+English: using Brollof's Simple Perceptron found here https://github.com/Brollof/SimplePerceptron , i have made a "three-gimbal mechanism " https://en.wikipedia.org/wiki/Gimbal alternative with machine learning for the x/y/z axis. you just need to move the "northpole/bullseye" around in the unity3D EDITOR. it's not working for the GAME mode yet.
 
-Français: J'utilise le Perceptron Brollof Simple et linéaire que vous pouvez trouver ici https://github.com/Brollof/SimplePerceptron  et j'ai construit un systèmes de "three-gimbal mechanism" alternatif https://en.wikipedia.org/wiki/Gimbal_lock#/media/File:Gimbal_3_axes_rotation.gif "machine learning" pour les axes x/y/z. vous avez juste besoin de déplacer le "PoleNord/bullseye" dans le Unity3D EDITOR. ça ne fonctionne pas présentement dans le Unity3D GAME mode
+Français: J'utilise le Perceptron Brollof Simple et linéaire que vous pouvez trouver ici https://github.com/Brollof/SimplePerceptron  et j'ai construit un systèmes de "three-gimbal mechanism" alternatif avec "machine learning" pour les axes x/y/z. vous avez juste besoin de déplacer le "PoleNord/bullseye" dans le Unity3D EDITOR. ça ne fonctionne pas présentement dans le Unity3D GAME mode
 
 current known issues: the dot product by itself to slow down high speed rotating gimbal needles is not enough to stabilize them IF they are rotating too fast. i will soon lerp this or use both dot product and lerp. 
 
