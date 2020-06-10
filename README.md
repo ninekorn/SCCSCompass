@@ -5,9 +5,9 @@ using Unity3D 2017.4.39f1
 [img]https://i.ibb.co/Vw21X5L/sccsgimbal0.png[/img]
 
 # SCCS3DCompass v1.0
-English: using Brollof's Simple linear Perceptron found here https://github.com/Brollof/SimplePerceptron , i have made a 3D Compass  machine learning system for the x/y/z axis. You just need to move the "northpole/bullseye" around in the unity3D EDITOR. it's not working for the GAME mode yet. https://en.wikipedia.org/wiki/Gimbal
+English: using Brollof's Simple linear Perceptron found here https://github.com/Brollof/SimplePerceptron , i have made a 3D Compass  machine learning system for the x/y/z axis. You just need to move the "northpole/bullseye" around in the unity3D EDITOR. it's not working for the GAME mode yet. but i am undecided as to if i should call it that or call it a "three-gimbal mecanism" https://en.wikipedia.org/wiki/Gimbal 
 
-Français: J'utilise le Perceptron Brollof Simple et linéaire que vous pouvez trouver ici https://github.com/Brollof/SimplePerceptron  et j'ai construit un système de Compas 3D pour les axes x/y/z. vous avez juste besoin de déplacer le "PoleNord/bullseye" dans le Unity3D EDITOR. ça ne fonctionne pas présentement dans le Unity3D GAME mode. https://fr.wikipedia.org/wiki/Cardan_(suspension)
+Français: J'utilise le Perceptron Brollof Simple et linéaire que vous pouvez trouver ici https://github.com/Brollof/SimplePerceptron  et j'ai construit un système de Boussole en 3D pour les axes x/y/z. vous avez juste besoin de déplacer le "PoleNord/bullseye" dans le Unity3D EDITOR. ça ne fonctionne pas présentement dans le Unity3D GAME mode. mais je ne suis pas sûr encore si je continue d'appeler ça une Boussole 3D ou si j'appelle ça un mécanisme de "trois-cardans" https://fr.wikipedia.org/wiki/Cardan_(suspension)
 
 current known issues: the dot product by itself to slow down high speed rotating gimbal needles is not enough to stabilize them IF they are rotating too fast. i will soon lerp this or use both dot product and lerp. 
 
