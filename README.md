@@ -7,7 +7,7 @@ using Unity3D 2017.4.39f1
 # SCCSGimbal v1.1
 English: using Brollof's Simple Perceptron found here https://github.com/Brollof/SimplePerceptron , i have made a "three-gimbal" system alternative with machine learning for the x/y/z axis. you just need to move the "northpole/bullseye" around in the unity3D EDITOR. it's not working for the GAME mode yet. https://en.wikipedia.org/wiki/Gimbal
 
-Français: J'utilise le Perceptron Brollof Simple et linéaire que vous pouvez trouver ici https://github.com/Brollof/SimplePerceptron  et j'ai construit un système de "trois cardans" avec "machine learning" pour les axes x/y/z. vous avez juste besoin de déplacer le "PoleNord/bullseye" dans le Unity3D EDITOR. ça ne fonctionne pas présentement dans le Unity3D GAME mode
+Français: J'utilise le Perceptron Brollof Simple et linéaire que vous pouvez trouver ici https://github.com/Brollof/SimplePerceptron  et j'ai construit un système de "trois cardans" avec "machine learning" pour les axes x/y/z. vous avez juste besoin de déplacer le "PoleNord/bullseye" dans le Unity3D EDITOR. ça ne fonctionne pas présentement dans le Unity3D GAME mode. https://fr.wikipedia.org/wiki/Cardan_(suspension)
 
 current known issues: the dot product by itself to slow down high speed rotating gimbal needles is not enough to stabilize them IF they are rotating too fast. i will soon lerp this or use both dot product and lerp. 
 
