@@ -4,7 +4,9 @@ using Unity3D 2017.4.39f1
 
 [img]https://i.ibb.co/Vw21X5L/sccsgimbal0.png[/img]
 
-# SCCS3DCompass v1.0
+# SCCSCompass2D turned to a SCCSCompass3D which in turn is the same as the SCCSGimbal that can be used for all Turret Defense games.
+more explanations coming soon.
+
 English: using Brollof's Simple linear Perceptron found here https://github.com/Brollof/SimplePerceptron , i have made a 3D Compass  machine learning system for the x/y/z axis. You just need to move the "northpole/bullseye" around in the unity3D EDITOR. it's not working for the GAME mode yet. but i am undecided as to if i should call it that or call it a "three-gimbal mecanism" https://en.wikipedia.org/wiki/Gimbal and i need more time to think about it.
 
 Français: J'utilise le Perceptron Brollof Simple et linéaire que vous pouvez trouver ici https://github.com/Brollof/SimplePerceptron  et j'ai construit un système de Boussole en 3D pour les axes x/y/z. vous avez juste besoin de déplacer le "PoleNord/bullseye" dans le Unity3D EDITOR. ça ne fonctionne pas présentement dans le Unity3D GAME mode. mais je ne suis pas sûr encore si je continue d'appeler ça une Boussole 3D ou si j'appelle ça un mécanisme de "trois-cardans" https://fr.wikipedia.org/wiki/Cardan_(suspension) et j'ai besoin de plus de temps pour y penser.
