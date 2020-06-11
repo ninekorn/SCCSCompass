@@ -4,9 +4,14 @@ using Unity3D 2017.4.39f1
 
 [img]https://i.ibb.co/Vw21X5L/sccsgimbal0.png[/img]
 
-# SCCSCompass2D turned to a SCCSCompass3D which i decided to put on the shelves to work on the SCCSGimbal that can be used for all Turret Defense games and on my version of a worms (team17) bitcoin game. one coin at a time, i might get there before i die of old age.
+# SCCSCompass2D turned to a SCCSCompass3D which i decided to put on the shelves to work on the SCCSGimbal.
 
-more explanations coming soon.
+This can be used for all Turret Defense games but i wanted this on my version of a worms (team17) bitcoin game "genre". All other shooting games don't know how to shoot bullets properly when it's supposed to be an AI behind it that does the job. it never hits the targets. i wanted very precise, worms, getting hit in the head or the anus. preferably the anus. and then the worms could yell at you for shooting them with System.Speech.Synthesis and System.Speech (if we can do that in Unity3d 2017.4.39f1). 
+
+When the worms are hit, they would yell at you insults while you planify your next turn just like in a worms (team17) bitcoin game "genre". The AI worms getting hit would yell at you or not,depending on their mood and the number of time that they have died or not in a worms (team17) bitcoin game "genre", things like "imma get you next round ninekorn/ or stop shooting me in the anus ninekorn etc". Every players in the game would have their names inside of the machine learning worms (team17) bitcoin game "genre", in order for text to be changed corresponding to which player they are against with, and for the machine learning worms to use accordingly, depending on the players prior moves or next moves at their turn. It would be hilarius. hilarius was my goal and it will continue to be.
+one coin at a time, i might get there before i die of old age.
+
+more explanations/ideas/development coming soon.
 
 English: using Brollof's Simple linear Perceptron found here https://github.com/Brollof/SimplePerceptron , i have made a 3D Compass  machine learning system for the x/y/z axis. You just need to move the "northpole/bullseye" around in the unity3D EDITOR. it's not working for the GAME mode yet. but i am undecided as to if i should call it that or call it a "three-gimbal mecanism" https://en.wikipedia.org/wiki/Gimbal and i need more time to think about it.
 
