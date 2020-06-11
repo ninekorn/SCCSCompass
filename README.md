@@ -4,7 +4,8 @@ using Unity3D 2017.4.39f1
 
 [img]https://i.ibb.co/Vw21X5L/sccsgimbal0.png[/img]
 
-# SCCSCompass2D turned to a SCCSCompass3D which in turn is the same as the SCCSGimbal that can be used for all Turret Defense games.
+# SCCSCompass2D turned to a SCCSCompass3D which i decided to put on the shelves to work on the SCCSGimbal that can be used for all Turret Defense games and on my version of a worms (team17) bitcoin game. one coin at a time, i might get there before i die of old age.
+
 more explanations coming soon.
 
 English: using Brollof's Simple linear Perceptron found here https://github.com/Brollof/SimplePerceptron , i have made a 3D Compass  machine learning system for the x/y/z axis. You just need to move the "northpole/bullseye" around in the unity3D EDITOR. it's not working for the GAME mode yet. but i am undecided as to if i should call it that or call it a "three-gimbal mecanism" https://en.wikipedia.org/wiki/Gimbal and i need more time to think about it.
