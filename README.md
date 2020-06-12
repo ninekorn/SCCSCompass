@@ -12,12 +12,20 @@ Poetic introduction to my recent lived life.
 Corse Language follows...
 ...before the 23rd of May happened that is, where i got ultimately totally cockblocked and buttfucked... (hilariously explained in egyptian fb scriptures)
 context is me chilling out at home writing on my personal facebook:
+🤔
 📜
+💩
+👀
 🗣
+👤
+👥
 🤳
+👀
 🗣
 💩
+➡️
 👮‍
+🚑
 🗣
 🎇
 💩
@@ -31,11 +39,11 @@ context is me chilling out at home writing on my personal facebook:
 😭
 😒
 
-ultimately totally cockblocked and buttfucked...temporarily... from writing more details on my projects, those i have on github, atomic torch forums, elite dangerous forums, from releasing sccsVD4ED, from releasing my mod 9sMODs at atomic torch as a modder, from making and editing videos of all of the station interiors, that i have completely rebuilt, by my own hands, with my upcoming Void Expanse 9sMODs, including lost completely hand made Karate Shotokan Gishinkan blender animation moves (not all of them, maybe only 0.01% of them) from start to end of the move in question, including my lost physics tank tracks that are part of ones of my first unfinished and fake garbage unfinished game close to 2017 (to be verified as the colliders are there but not the mesh of the tank tracks themselves), that i didn't share yet, because i didn't have the time, so that verbal 🗣💩 and writen diarrhea 📜💩 could continue, without the community knowing what i am all about . I am not worried at all. I am, one day, maybe going to fix it all, one coin at a time, i might get there, rich out of building bitcoin mining games, before i die, of old age, and then i'll sue all of those fuckers out, one at a time, after i lay, in my tomb. yes, im gonna dream about it, even when dead 😇  🧐
+ultimately totally cockblocked and buttfucked...temporarily... from writing more details on my projects, those i have on github, atomic torch forums, elite dangerous forums, from releasing sccsVD4ED, from releasing my mod 9sMODs at atomic torch as a modder, from making and editing videos of all of the station interiors, that i have completely rebuilt, by my own hands, with my upcoming Void Expanse 9sMODs, including lost completely hand made Karate Shotokan Gishinkan blender animation moves (not all of them, maybe only 0.01% of them) from start to end of the move in question, including my lost physics tank tracks that are part of ones of my first unfinished and fake garbage unfinished game close to 2017 (to be verified as the colliders are there but not the mesh of the tank tracks themselves), that i didn't share yet, because i didn't have the time, so that verbal 🗣💩 and writen diarrhea 📜💩 could continue, without the community knowing what i am all about . I am not worried at all. I am, one day, maybe going to fix it all, one coin at a time, i might get there, rich out of building bitcoin mining games, before i die, of old age, and then i'll sue all of those fuckers out, one at a time, after i lay, in my tomb. yes, im gonna dream about it, even when dead.
 
-😤  🧐
 Corse Language stops temporarily...
 
+😤  🧐
 My projects can be used for all Turret Defense games but i wanted this on my version of a worms (team17) bitcoin game "genre". All other shooting games don't know how to shoot bullets properly when it's supposed to be an AI behind it that does the job, and when it's an AI
 that does the job, it's not supposed to ever fail. i wanted very precise, worms, getting hit in the head or the anus. preferably the anus. and then the worms could yell at you for shooting them USING System.Speech.Synthesis and System.Speech (if we can use those dependencies in Unity3d 2017.4.39f1). 
 
