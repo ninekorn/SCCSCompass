@@ -4,8 +4,9 @@ using Unity3D 2017.4.39f1
 
 [img]https://i.ibb.co/Vw21X5L/sccsgimbal0.png[/img]
 
+Corse Language follows...
 # SCCSCompass2D turned to a SCCSCompass3D which i decided to put on the shelves to work on the SCCSGimbal...
-...before the 23rd of May happened that is, where i got ultimately totally cockblocked... (hilariously explained in egyptian fb scriptures)
+...before the 23rd of May happened that is, where i got ultimately totally cockblocked and buttfucked... (hilariously explained in egyptian fb scriptures)
 
 📜
 🤳
@@ -28,6 +29,7 @@ using Unity3D 2017.4.39f1
 ...from writing more details on my projects, those i have on github, atomic torch forums, elite dangerous forums, and all of the tons of other projects, that lie on my hardrives, that i didn't share yet, because i didn't have the time, so that verbal and writen diarrhea could continue, without the community knowing what i am all about. I am not worried at all. I'm, one day, maybe going to fix it all, one coin at a time, i might get there, rich out of building bitcoin mining games, before i die, of old age, and then i'll sue all of those fuckers out, one at a time, after i lay, in my tomb. yes, im gonna dream about it, even when dead 😇  🧐
 
 😤  🧐
+Corse Language stops temporarily...
 
 My projects can be used for all Turret Defense games but i wanted this on my version of a worms (team17) bitcoin game "genre". All other shooting games don't know how to shoot bullets properly when it's supposed to be an AI behind it that does the job, and when it's an AI
 that does the job, it's not supposed to ever fail. i wanted very precise, worms, getting hit in the head or the anus. preferably the anus. and then the worms could yell at you for shooting them USING System.Speech.Synthesis and System.Speech (if we can use those dependencies in Unity3d 2017.4.39f1). 
