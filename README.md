@@ -25,7 +25,7 @@ using Unity3D 2017.4.39f1
 😭
 😒
 
-...from writing more details on my projects, those i have on github, atomic torch forums, elite dangerous forums, and all of the tons of other projects, that lie on my hardrives, that i didn't share yet, because i didn't have the time, so that verbal and writen diarrhea could continue, without the community knowing what i am all about. I am not worried at all. I'm, one day, maybe going to fix it all, one coin at a time, i might get there, rich out of building bitcoin mining games, before i die, of old age, and then i'll sue all of those fuckers out, one at a time, after i lay, in my tomb. yes im gonna dream about it, even when dead 😇  🧐
+...from writing more details on my projects, those i have on github, atomic torch forums, elite dangerous forums, and all of the tons of other projects, that lie on my hardrives, that i didn't share yet, because i didn't have the time, so that verbal and writen diarrhea could continue, without the community knowing what i am all about. I am not worried at all. I'm, one day, maybe going to fix it all, one coin at a time, i might get there, rich out of building bitcoin mining games, before i die, of old age, and then i'll sue all of those fuckers out, one at a time, after i lay, in my tomb. yes, im gonna dream about it, even when dead 😇  🧐
 
 😤  🧐
 
