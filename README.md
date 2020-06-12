@@ -5,8 +5,22 @@ using Unity3D 2017.4.39f1
 [img]https://i.ibb.co/Vw21X5L/sccsgimbal0.png[/img]
 
 # SCCSCompass2D turned to a SCCSCompass3D which i decided to put on the shelves to work on the SCCSGimbal...
-...before the 23rd of May happened that is, where i got ultimately totally cockblocked 
-📜  🤳  🗣  💩  👮‍   🗣  🎇  💩  🗣  💩  👮‍  📜     ➡️  🚑  ➡️
+...before the 23rd of May happened that is, where i got ultimately totally cockblocked, explained in egyptian scriptures:
+📜  
+🤳 
+🗣  
+💩  
+👮‍   
+🗣  
+🎇  
+💩  
+🗣  
+💩  
+👮‍  
+📜    
+➡️  
+🚑  
+➡️
 from writing more details on my projects, so that verbal and writen diarrhea could continue. I'm one day maybe going to fix it all, one coin at a time, i might get there, rich out of building bitcoin mining games, before i die of old age, and then i'll sue all of those fuckers out, one at a time. 😇  🧐
 
 😤  🧐
