@@ -10,6 +10,7 @@ using Unity3D 2017.4.39f1
 Poetic introduction to my recent lived life. 
 
 Corse Language follows...
+
 ...before the 23rd of May happened that is, where i got ultimately totally cockblocked and buttfucked... (hilariously explained in egyptian fb scriptures)
 context is me chilling out at home writing on my personal facebook:
 🤔
