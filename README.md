@@ -5,7 +5,7 @@ using Unity3D 2017.4.39f1
 [img]https://i.ibb.co/Vw21X5L/sccsgimbal0.png[/img]
 
 # SCCSCompass2D turned to a SCCSCompass3D which i decided to put on the shelves to work on the SCCSGimbal...
-...before the 23rd of May happened that is, where i got ultimately totally cockblocked, explained in egyptian scriptures:
+...before the 23rd of May happened that is, where i got ultimately totally cockblocked (hilariously explained in egyptian scriptures):
 
 📜
 🤳
