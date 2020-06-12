@@ -16,11 +16,14 @@ context is me chilling out at home writing on my personal facebook:
 📜
 💩
 👀
+🤳
 🗣
 👤
 👥
+🎇
+🎇
+🎇
 🤳
-👀
 🗣
 💩
 ➡️
