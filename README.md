@@ -22,7 +22,8 @@ using Unity3D 2017.4.39f1
 ➡️
 🚑
 ➡️
-from writing more details on my projects, so that verbal and writen diarrhea could continue. I'm one day maybe going to fix it all, one coin at a time, i might get there, rich out of building bitcoin mining games, before i die of old age, and then i'll sue all of those fuckers out, one at a time. 😇  🧐
+
+from writing more details on my projects, even those i have on github, so that verbal and writen diarrhea could continue without me able to even start putting more details and whatnot. I am not worried at all. I'm one day maybe going to fix it all, one coin at a time, i might get there, rich out of building bitcoin mining games, before i die of old age, and then i'll sue all of those fuckers out, one at a time. 😇  🧐
 
 😤  🧐
 This can be used for all Turret Defense games but i wanted this on my version of a worms (team17) bitcoin game "genre". All other shooting games don't know how to shoot bullets properly when it's supposed to be an AI behind it that does the job, and when it's an AI
