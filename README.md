@@ -1,9 +1,14 @@
-
-
 using Unity3D 2017.4.39f1
 
-[img]https://i.ibb.co/Vw21X5L/sccsgimbal0.png[/img]
+/////////////////////////
+2020-june-21st - i barely could/can program anything ever since the 23rd of May. And this stagnation was caused by events that were explained in a prior post hilariously explained in egyptian fb scriptures. I am tired of this nonsense and now, since i still didn't receive my part of selling my house here, it causes more stress added to this. More and more because enough is never enough for some people. I've been a gamer before. I am temporarily going back to my favorites BattleField 4 and maybe Counter-Strike Global offensive and 7DaysToDie in the mix there. I need a good gaming frustration reliever for a while maybe. we will see.
+end of...
+/////////////////////////
 
+
+
+
+[img]https://i.ibb.co/Vw21X5L/sccsgimbal0.png[/img]
 
 # SCCSCompass2D turned to a SCCSCompass3D which i decided to put on the shelves to work on the SCCSGimbal...
 
